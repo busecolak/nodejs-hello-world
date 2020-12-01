@@ -1,0 +1,17 @@
+{
+    "name": "nodejs-hello-world",
+    "version": "1.0.0",
+    "description": "Hello World Sample App",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/busecolak/nodejs-hello-world.git"
+    },
+    "author": "Buse Colak <buse.colak.25@gmail.com>",
+    "license": "",
+    "homepage": "https://github.com/busecolak/nodejs-hello-world"
+}
