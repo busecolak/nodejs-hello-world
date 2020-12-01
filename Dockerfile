@@ -2,6 +2,8 @@ FROM node:12-alpine
 
 WORKDIR /app
 
+ENV PORT 11130
+
 COPY package.json index.js ./
 
 RUN npm install
