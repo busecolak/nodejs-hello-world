@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "npm run unit",
+        "test": "npm run start & npm run unit",
         "unit": "mocha test/test.js"
     },
     "devDependencies": {
