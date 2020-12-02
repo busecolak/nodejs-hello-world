@@ -22,6 +22,7 @@ test_application:
   script: npm test
 
 push_image:
+  image: docker:latest
   stage: push
   script:
     - docker build --build-arg GIT_COMMIT=$CI_COMMIT_SHA -t busecolak/nodejs-hello-world -t busecolak/nodejs-hello-world:$CI_JOB_ID .
