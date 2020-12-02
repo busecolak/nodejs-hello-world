@@ -10,7 +10,7 @@ ENV PORT 11130
 
 COPY package.json index.js ./
 
-RUN npm install
+RUN npm install --only=production
 
-EXPOSE 11130
-CMD [ "node", "index.js" ]
+EXPOSE $PORT
+CMD [ "npm", "start" ]
