@@ -7,6 +7,7 @@ cache:
 stages:
   - build
   - test
+  - push
 
 install_dependencies:
   stage: build
@@ -16,6 +17,13 @@ install_dependencies:
     paths:
       - node_modules/
 
-test_app:
+test_application:
   stage: test
   script: npm test
+
+push_image:
+  stage: push
+  script:
+    - docker build --build-arg GIT_COMMIT=$CI_COMMIT_SHA -t busecolak/nodejs-hello-world -t busecolak/nodejs-hello-world:$CI_JOB_ID .
+    - docker push busecolak/nodejs-hello-world:$CI_JOB_ID
+    - docker push busecolak/nodejs-hello-world:latest
